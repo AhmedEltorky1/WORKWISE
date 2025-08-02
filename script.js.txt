@@ -1,0 +1,220 @@
+// ?????? ??? ???????
+const homeSection = document.getElementById('homeSection');
+const applicationSection = document.getElementById('applicationSection');
+const staffSection = document.getElementById('staffSection');
+const dashboardSection = document.getElementById('dashboardSection');
+
+document.getElementById('homeLink').addEventListener('click', () => {
+    showSection(homeSection);
+});
+
+document.getElementById('jobsLink').addEventListener('click', () => {
+    showSection(homeSection);
+    window.scrollTo(0, document.querySelector('.jobs-container').offsetTop - 100);
+});
+
+document.getElementById('applyLink').addEventListener('click', () => {
+    showSection(applicationSection);
+});
+
+document.getElementById('staffLoginBtn').addEventListener('click', () => {
+    showSection(staffSection);
+});
+
+function showSection(section) {
+    homeSection.style.display = 'none';
+    applicationSection.style.display = 'none';
+    staffSection.style.display = 'none';
+    dashboardSection.style.display = 'none';
+    section.style.display = 'block';
+}
+
+// ?????? ????? ????????
+const selectBtns = document.querySelectorAll('.select-btn');
+const jobPositionInput = document.getElementById('jobPosition');
+
+selectBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const jobTitle = btn.getAttribute('data-job');
+        jobPositionInput.value = jobTitle;
+        showSection(applicationSection);
+        
+        // ??????? ??? ??????
+        applicationSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+// ???? ?????
+const recordBtn = document.getElementById('recordBtn');
+const stopBtn = document.getElementById('stopBtn');
+const timer = document.getElementById('timer');
+const visualizer = document.getElementById('visualizer');
+const audioPlayback = document.getElementById('audioPlayback');
+
+let mediaRecorder;
+let audioChunks = [];
+let recording = false;
+let seconds = 0;
+let timerInterval;
+const maxDuration = 4 * 60; // 4 ????? ??? ????
+
+// ??? ???????
+recordBtn.addEventListener('click', async () => {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        mediaRecorder = new MediaRecorder(stream);
+        
+        mediaRecorder.ondataavailable = (e) => {
+            audioChunks.push(e.data);
+        };
+        
+        mediaRecorder.onstop = () => {
+            const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+            const audioUrl = URL.createObjectURL(audioBlob);
+            audioPlayback.src = audioUrl;
+            audioPlayback.style.display = 'block';
+        };
+        
+        mediaRecorder.start();
+        recording = true;
+        recordBtn.disabled = true;
+        stopBtn.disabled = false;
+        visualizer.style.display = 'flex';
+        
+        // ??? ??????
+        seconds = 0;
+        timerInterval = setInterval(() => {
+            seconds++;
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            timer.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            
+            // ????? ??????? ???????? ??? ?????? ???? ??????
+            if (seconds >= maxDuration) {
+                stopRecording();
+            }
+        }, 1000);
+    } catch (err) {
+        alert('???? ?????? ??? ??????????. ???? ?????? ?? ?????????.');
+        console.error('Microphone access error:', err);
+    }
+});
+
+// ????? ???????
+stopBtn.addEventListener('click', stopRecording);
+
+function stopRecording() {
+    if (mediaRecorder && recording) {
+        mediaRecorder.stop();
+        recording = false;
+        clearInterval(timerInterval);
+        recordBtn.disabled = false;
+        stopBtn.disabled = true;
+        visualizer.style.display = 'none';
+    }
+}
+
+// ?????/????? ???? ??????
+const passwordToggle = document.getElementById('passwordToggle');
+const passwordInput = document.getElementById('password');
+
+passwordToggle.addEventListener('click', () => {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    passwordToggle.innerHTML = type === 'password' ? 
+        '<i class="fas fa-eye"></i>' : 
+        '<i class="fas fa-eye-slash"></i>';
+});
+
+// ????? ?????
+const applicationForm = document.querySelector('.application-form');
+
+applicationForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // ?????? ?? ???? ????? ????
+    if (!audioPlayback.src) {
+        alert('?????? ????? ????? ???? ??? ???????');
+        return;
+    }
+    
+    // ?? ?????? ??? ???? ????? ???????? ??????
+    alert('?? ????? ???? ?????! ???? ??????? ?? ??? ???? ???????.');
+    applicationForm.reset();
+    audioPlayback.style.display = 'none';
+    timer.textContent = '00:00';
+    seconds = 0;
+    audioChunks = [];
+    showSection(homeSection);
+});
+
+// ????? ???????
+const categoryBtns = document.querySelectorAll('.category-btn');
+
+categoryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // ?? ?????? ??? ???? ????? ???????
+        alert('?? ????? ?????. ???? ????? ????? ??????? ??????.');
+    });
+});
+
+// ???? ????????
+document.getElementById('staffLogin').addEventListener('click', () => {
+    const password = passwordInput.value;
+    
+    // ???? ??????: workwise123456
+    if (password === 'workwise123456') {
+        showSection(dashboardSection);
+    } else {
+        alert('???? ?????? ??? ?????. ?????? ???????? ??? ????.');
+    }
+});
+
+// ????? ???? ????????
+document.getElementById('logoutBtn').addEventListener('click', () => {
+    if (confirm('?? ???? ????? ?????? ?? ???? ???????')) {
+        showSection(homeSection);
+    }
+});
+
+// ??? ?????? ???????
+const viewButtons = document.querySelectorAll('.view-btn');
+const applicantDetail = document.getElementById('applicantDetail');
+const closeDetail = document.getElementById('closeDetail');
+
+viewButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        applicantDetail.style.display = 'block';
+        
+        // ??????? ??? ??? ????????
+        applicantDetail.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+closeDetail.addEventListener('click', () => {
+    applicantDetail.style.display = 'none';
+});
+
+// ??? ?????????
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    const rows = document.querySelectorAll('.applicants-table tbody tr');
+    
+    rows.forEach(row => {
+        const name = row.querySelector('.applicant-name span').textContent.toLowerCase();
+        const job = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+        const phone = row.querySelector('td:nth-child(3)').textContent.toLowerCase();
+        const email = row.querySelector('td:nth-child(4)').textContent.toLowerCase();
+        
+        if (name.includes(searchTerm) || job.includes(searchTerm) || 
+            phone.includes(searchTerm) || email.includes(searchTerm)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+});

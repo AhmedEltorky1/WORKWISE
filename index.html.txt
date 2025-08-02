@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Wise - ???? ??????? ??????</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ???? ?????? -->
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-briefcase"></i>
+                <h1>Work Wise</h1>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#" class="active" id="homeLink"><i class="fas fa-home"></i> ????????</a>
+                <a href="#" id="jobsLink"><i class="fas fa-briefcase"></i> ???????</a>
+                <a href="#" id="applyLink"><i class="fas fa-file-alt"></i> ???????</a>
+                <a href="#" id="aboutLink"><i class="fas fa-info-circle"></i> ???</a>
+            </div>
+            
+            <button class="staff-login-btn" id="staffLoginBtn">
+                <i class="fas fa-lock"></i> ???? ????????
+            </button>
+        </nav>
+        
+        <!-- ??? ???????? -->
+        <section id="homeSection" class="home-section">
+            <header>
+                <h1><i class="fas fa-briefcase"></i> Work Wise</h1>
+                <p>???? ??????? ?????? ???? ???? ?? ????? ?? ???? ????? ????????. ???? ?? ???? ??????? ?? ???? ??????? ?? ??????? ??????? ??????? ??? ??????.</p>
+            </header>
+            
+            <!-- ???? ??????? -->
+            <div class="categories">
+                <button class="category-btn active">???? ???????</button>
+                <button class="category-btn">????? ?????</button>
+                <button class="category-btn">???? ????</button>
+                <button class="category-btn">?? ????</button>
+                <button class="category-btn">???? ????</button>
+            </div>
+            
+            <!-- ????? ??????? -->
+            <div class="jobs-container">
+                <!-- ????? Concentrix ?????????? -->
+                <div class="job-card concentrix">
+                    <div class="job-header concentrix">
+                        <div class="job-type">???? ????</div>
+                        <h3>????? ???? ????? (??????????)</h3>
+                        <p>Concentrix</p>
+                    </div>
+                    <div class="job-body">
+                        <div class="job-details">
+                            <div class="detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>?????????/???????</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>14,000 - 19,000 ?.?</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>9 ?????</span>
+                            </div>
+                        </div>
+                        
+                        <div class="requirements">
+                            <h4>?????????:</h4>
+                            <ul>
+                                <li>????? ????? ?????????? (????? B2 ?? C1)</li>
+                                <li>???? ???</li>
+                                <li>???? ????</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirements">
+                            <h4>???????:</h4>
+                            <ul>
+                                <li>??? ???????</li>
+                                <li>????? ???</li>
+                                <li>??? ?????</li>
+                                <li>?????? ?????? (??? ? 2000)</li>
+                            </ul>
+                        </div>
+                        
+                        <button class="select-btn" data-job="????? ???? ????? (??????????)">
+                            ??????? ??? ???????
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- ????? Concentrix ???????? -->
+                <div class="job-card concentrix">
+                    <div class="job-header concentrix">
+                        <div class="job-type">???? ????</div>
+                        <h3>????? ???? ????? (????????)</h3>
+                        <p>Concentrix</p>
+                    </div>
+                    <div class="job-body">
+                        <div class="job-details">
+                            <div class="detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>????? ???</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>26,000 - 34,000 ?.?</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>9 ?????</span>
+                            </div>
+                        </div>
+                        
+                        <div class="requirements">
+                            <h4>?????????:</h4>
+                            <ul>
+                                <li>????? ????? ???????? (????? B2 ?? C1)</li>
+                                <li>???? ?????</li>
+                                <li>???? ????</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirements">
+                            <h4>???????:</h4>
+                            <ul>
+                                <li>??? ??? 5,000 ????</li>
+                                <li>????? ???</li>
+                                <li>??? ?????</li>
+                                <li>?????? ???? ?????</li>
+                            </ul>
+                        </div>
+                        
+                        <button class="select-btn" data-job="????? ???? ????? (????????)">
+                            ??????? ??? ???????
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- ????? HSBC -->
+                <div class="job-card hsbc">
+                    <div class="job-header hsbc">
+                        <div class="job-type">???? ????</div>
+                        <h3>???? ???? ?????</h3>
+                        <p>HSBC</p>
+                    </div>
+                    <div class="job-body">
+                        <div class="job-details">
+                            <div class="detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Smart Village</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>9,000 - 15,700 ?.?</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>9 ?????</span>
+                            </div>
+                        </div>
+                        
+                        <div class="requirements">
+                            <h4>?????????:</h4>
+                            <ul>
+                                <li>????? ????? ?????????? (????? B2)</li>
+                                <li>?? ?? ???? ?? 35 ???</li>
+                                <li>???? ????</li>
+                                <li>?? ????? ????</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirements">
+                            <h4>???????:</h4>
+                            <ul>
+                                <li>????? ???</li>
+                                <li>??? ?????</li>
+                                <li>?????? + Bonus</li>
+                                <li>????? ?????</li>
+                                <li>??????? ??????</li>
+                            </ul>
+                        </div>
+                        
+                        <button class="select-btn" data-job="???? ???? ?????">
+                            ??????? ??? ???????
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- ????? Volume X -->
+                <div class="job-card volumex">
+                    <div class="job-header volumex">
+                        <div class="job-type">?? ???</div>
+                        <h3>????? ????? (?????)</h3>
+                        <p>Volume X</p>
+                    </div>
+                    <div class="job-body">
+                        <div class="job-details">
+                            <div class="detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>?? ???</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>$4.2/???? + ??????</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>40 ????/?????</span>
+                            </div>
+                        </div>
+                        
+                        <div class="requirements">
+                            <h4>?????????:</h4>
+                            <ul>
+                                <li>????? ????? ???????? (????? B2)</li>
+                                <li>???? 6 ???? ?? ???????</li>
+                                <li>???? ??????? ?????? ??????</li>
+                                <li>?????? ??? ????? ???? ?????</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="requirements">
+                            <h4>???????:</h4>
+                            <ul>
+                                <li>??? ??? ?? ??????</li>
+                                <li>???? ?????? + ??????</li>
+                                <li>????? ????? (????? ??????)</li>
+                                <li>???? ??????? ??? ????? ??????</li>
+                            </ul>
+                        </div>
+                        
+                        <button class="select-btn" data-job="????? ????? (?????)">
+                            ??????? ??? ???????
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ??? ??????? -->
+        <section id="applicationSection" class="application-section">
+            <h2><i class="fas fa-file-alt"></i> ????? ??? ???????</h2>
+            <form class="application-form">
+                <div class="form-group">
+                    <label for="fullName">????? ???????</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phoneNumber">??? ??????</label>
+                    <input type="tel" id="phoneNumber" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">?????? ??????????</label>
+                    <input type="email" id="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="jobPosition">??????? ????????</label>
+                    <input type="text" id="jobPosition" readonly>
+                </div>
+                
+                <div class="form-group full">
+                    <label>???????</label>
+                    <textarea rows="3" placeholder="?????? ?? ?????? ????????..."></textarea>
+                </div>
+                
+                <div class="form-group full">
+                    <div class="voice-recorder">
+                        <div class="recorder-header">
+                            <div class="recorder-title">
+                                <i class="fas fa-microphone"></i> ????? ???? (?? ???? 4 ?????)
+                            </div>
+                            <div class="recorder-controls">
+                                <button type="button" class="recorder-btn" id="recordBtn">
+                                    <i class="fas fa-circle"></i> ??? ???????
+                                </button>
+                                <button type="button" class="recorder-btn stop" id="stopBtn" disabled>
+                                    <i class="fas fa-stop"></i> ????? ???????
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="timer" id="timer">00:00</div>
+                        
+                        <div class="recording-visualizer" id="visualizer">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        
+                        <audio class="audio-playback" id="audioPlayback" controls></audio>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> ????? ?????
+                </button>
+            </form>
+        </section>
+        
+        <!-- ??? ???????? -->
+        <section id="staffSection" class="staff-section">
+            <h2><i class="fas fa-lock"></i> ???? ????????</h2>
+            <p>??? ??????? ????? ?????? ??????? ???. ?????? ????? ???? ?????? ?????? ??? ???? ??????.</p>
+            
+            <div class="login-form">
+                <div class="password-input">
+                    <input type="password" id="password" placeholder="???? ???? ??????">
+                    <span class="password-toggle" id="passwordToggle">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+                
+                <button class="staff-btn" id="staffLogin">???? ????????</button>
+            </div>
+        </section>
+        
+        <!-- ???? ???? ???????? -->
+        <section id="dashboardSection" class="dashboard-section">
+            <div class="dashboard-header">
+                <h2><i class="fas fa-tachometer-alt"></i> ???? ???? ????????</h2>
+                <button class="staff-login-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> ????? ??????
+                </button>
+            </div>
+            
+            <!-- ???????? ????????? -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <h3>?????? ?????????</h3>
+                    <div class="value">147</div>
+                    <div class="trend"><i class="fas fa-arrow-up"></i> +12% ?? ????? ??????</div>
+                </div>
+                
+                <div class="stat-card concentrix">
+                    <h3>?????? Concentrix</h3>
+                    <div class="value">68</div>
+                    <div class="trend"><i class="fas fa-arrow-up"></i> +8% ?? ????? ??????</div>
+                </div>
+                
+                <div class="stat-card hsbc">
+                    <h3>?????? HSBC</h3>
+                    <div class="value">42</div>
+                    <div class="trend"><i class="fas fa-arrow-down"></i> -3% ?? ????? ??????</div>
+                </div>
+                
+                <div class="stat-card volumex">
+                    <h3>?????? Volume X</h3>
+                    <div class="value">37</div>
+                    <div class="trend"><i class="fas fa-arrow-up"></i> +22% ?? ????? ??????</div>
+                </div>
+            </div>
+            
+            <!-- ????? ????????? -->
+            <div class="applicants-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-user-friends"></i> ????????? ?????</h3>
+                    
+                    <div class="controls">
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="???? ???? ???????...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <button class="filter-btn"><i class="fas fa-filter"></i> ?????</button>
+                        <button class="export-btn"><i class="fas fa-file-export"></i> ?????</button>
+                    </div>
+                </div>
+                
+                <table class="applicants-table">
+                    <thead>
+                        <tr>
+                            <th>???????</th>
+                            <th>???????</th>
+                            <th>??? ??????</th>
+                            <th>?????? ??????????</th>
+                            <th>????? ???????</th>
+                            <th>??????</th>
+                            <th>?????????</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="applicant-name">
+                                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="???? ???????">
+                                    <span>???? ????</span>
+                                </div>
+                            </td>
+                            <td>????? ???? ????? (??????????)</td>
+                            <td>01012345678</td>
+                            <td>sara.ahmed@example.com</td>
+                            <td>2023-07-30</td>
+                            <td><span class="status pending">?? ????????</span></td>
+                            <td><button class="action-btn view-btn" data-id="1"><i class="fas fa-eye"></i> ???</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="applicant-name">
+                                    <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="???? ???????">
+                                    <span>???? ???</span>
+                                </div>
+                            </td>
+                            <td>????? ???? ????? (????????)</td>
+                            <td>01123456789</td>
+                            <td>mohamed.hassan@example.com</td>
+                            <td>2023-07-29</td>
+                            <td><span class="status reviewed">??? ????????</span></td>
+                            <td><button class="action-btn view-btn" data-id="2"><i class="fas fa-eye"></i> ???</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="applicant-name">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="???? ???????">
+                                    <span>????? ?????</span>
+                                </div>
+                            </td>
+                            <td>???? ???? ?????</td>
+                            <td>01234567890</td>
+                            <td>fatma.mahmoud@example.com</td>
+                            <td>2023-07-28</td>
+                            <td><span class="status rejected">?????</span></td>
+                            <td><button class="action-btn view-btn" data-id="3"><i class="fas fa-eye"></i> ???</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="applicant-name">
+                                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="???? ???????">
+                                    <span>???? ????</span>
+                                </div>
+                            </td>
+                            <td>????? ????? (?????)</td>
+                            <td>01567890123</td>
+                            <td>khaled.waleed@example.com</td>
+                            <td>2023-07-27</td>
+                            <td><span class="status pending">?? ????????</span></td>
+                            <td><button class="action-btn view-btn" data-id="4"><i class="fas fa-eye"></i> ???</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="applicant-name">
+                                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="???? ???????">
+                                    <span>????? ???</span>
+                                </div>
+                            </td>
+                            <td>????? ???? ????? (??????????)</td>
+                            <td>01098765432</td>
+                            <td>nouran.sayed@example.com</td>
+                            <td>2023-07-26</td>
+                            <td><span class="status reviewed">??? ????????</span></td>
+                            <td><button class="action-btn view-btn" data-id="5"><i class="fas fa-eye"></i> ???</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- ?????? ??????? -->
+            <div class="applicant-detail" id="applicantDetail">
+                <div class="detail-header">
+                    <h3>?????? ???????</h3>
+                    <button class="close-btn" id="closeDetail"><i class="fas fa-times"></i></button>
+                </div>
+                
+                <div class="applicant-info">
+                    <div class="info-card">
+                        <h4><i class="fas fa-user"></i> ????????? ???????</h4>
+                        <div class="info-row">
+                            <div class="info-label">????? ??????:</div>
+                            <div class="info-value">???? ???? ????</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">??? ??????:</div>
+                            <div class="info-value">01012345678</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">?????? ??????????:</div>
+                            <div class="info-value">sara.ahmed@example.com</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">????? ???????:</div>
+                            <div class="info-value">15 ???? 1995</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">???????:</div>
+                            <div class="info-value">??????</div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4><i class="fas fa-briefcase"></i> ??????? ???????</h4>
+                        <div class="info-row">
+                            <div class="info-label">???????:</div>
+                            <div class="info-value">????? ???? ????? (??????????)</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">??????:</div>
+                            <div class="info-value">Concentrix</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">????? ???????:</div>
+                            <div class="info-value">30 ????? 2023 - 10:45 ??????</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">??????:</div>
+                            <div class="info-value"><span class="status pending">?? ????????</span></div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">??? ?????:</div>
+                            <div class="info-value">30 ????? 2023 - 11:30 ??????</div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4><i class="fas fa-graduation-cap"></i> ???????? ???????</h4>
+                        <div class="info-row">
+                            <div class="info-label">???????:</div>
+                            <div class="info-value">????? ???????</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">??????:</div>
+                            <div class="info-value">????? ??????????</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">??? ??????:</div>
+                            <div class="info-value">2017</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">??????:</div>
+                            <div class="info-value">??? ????</div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4><i class="fas fa-file-alt"></i> ??????? ???????</h4>
+                        <div class="info-row">
+                            <div class="info-label">????????:</div>
+                            <div class="info-value">???? ?? ???? ???? ??????? ??? 3 ????? ?? ???? ???????. ???? ????? ?????????? ?????? ???? ?????? ?????? ?? ?? ???????? ???????? ?? ???????.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ???? ????? -->
+                <div class="voice-player">
+                    <div class="player-header">
+                        <h4><i class="fas fa-microphone-alt"></i> ??????? ?????? ???????</h4>
+                        <div class="audio-controls">
+                            <button class="action-btn"><i class="fas fa-download"></i> ?????</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> ??????</button>
+                        </div>
+                    </div>
+                    
+                    <audio class="audio-player" controls>
+                        <source src="#" type="audio/mpeg">
+                        ??????? ?? ???? ????? ?????.
+                    </audio>
+                    
+                    <div class="transcript">
+                        <h5>?? ???????:</h5>
+                        <p>"???? ?? ???? ???? ??????? ??? 3 ????? ?? ???? ???????. ??? ???? ?? ??????? ?? ????? ??????? ??? ???????? ???? ????. ???? ????? ?????????? ?????? ?????? ??????? ????? ??????. ???? ?? ???? ?????? ?????? ?? ???? ??? ?????."</p>
+                    </div>
+                </div>
+                
+                <!-- ??????? ??????? -->
+                <div style="display: flex; gap: 15px; margin-top: 30px;">
+                    <button class="action-btn" style="background: var(--success); color: white;">
+                        <i class="fas fa-check"></i> ???? ???????
+                    </button>
+                    <button class="action-btn" style="background: #ef4444; color: white;">
+                        <i class="fas fa-times"></i> ??? ???????
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-envelope"></i> ????? ????
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-phone"></i> ????? ??????
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>???? ?????? ?????? &copy; 2023 Work Wise - ???? ??????? ??????</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
